@@ -415,6 +415,8 @@ function isSafe(userAgent) {
   var consecutive = 0
     , code = 0;
 
+  if (userAgent.length > 1000) return false;
+
   for (var i = 0; i < userAgent.length; i++) {
     code = userAgent.charCodeAt(i);
     // numbers between 0 and 9, letters between a and z, spaces and control
